@@ -9,7 +9,7 @@ public class Intersection_Of_Two_Linked_Lists {
     /*
         Brute Force Approach
         TC -> O(N1 + N2)
-        SC -> O(N1 + N2)
+        SC -> O(N1)
         Where N1 & N2 are the no. of nodes in headA & headB list
         public static ListNode getIntersectionNode(ListNode headA, ListNode headB) {
             HashSet<ListNode> set = new HashSet<>();
@@ -18,11 +18,10 @@ public class Intersection_Of_Two_Linked_Lists {
                 headA = headA.next;
             }
             while(headB != null){
-                if(set.add(headB)){
-                    headB = headB.next;
-                }else{
+                if(set.contains(headB)){
                     break;
                 }
+                headB = headB.next;
             }
             return headB;
         }
