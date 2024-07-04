@@ -1,6 +1,6 @@
 /*
     Problem Name: Delete Node in a Linked List
-    Problem Link: https://leetcode.com/problems/delete-node-in-a-linked-list/description/ 
+    Problem Link: https://leetcode.com/problems/delete-node-in-a-linked-list/
 */
 
 public class Delete_Node_In_A_Linked_List {
