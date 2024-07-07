@@ -1,3 +1,8 @@
+/*
+    Problem Name: Max Consecutive Ones
+    Problem Link: https://leetcode.com/problems/max-consecutive-ones/
+*/
+
 import java.util.Arrays;
 
 public class Max_Consecutive_Ones {
