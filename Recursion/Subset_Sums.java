@@ -22,7 +22,10 @@ public class Subset_Sums {
             result.add(sum);
             return;
         }
+        // Pick the Element
         subsetSumHelper(index + 1, arr, sum + arr.get(index), result);
+
+        // Do not Pick the Element
         subsetSumHelper(index + 1, arr, sum, result);
     }
     public static void main(String[] args) {
