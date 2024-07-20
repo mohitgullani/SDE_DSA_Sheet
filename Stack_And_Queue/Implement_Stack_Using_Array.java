@@ -16,20 +16,10 @@ public class Implement_Stack_Using_Array {
             top = -1;
         }
     
-        /*
-            Push Operation
-            TC -> O(1)
-            SC -> O(1)
-        */
         public void push(int x) {
             arr[++top] = x;
         }
         
-        /*
-            Pop Operation
-            TC -> O(1)
-            SC -> O(1)
-        */
         public int pop() {
             if(top != -1){
                 int element = arr[top];
@@ -39,13 +29,25 @@ public class Implement_Stack_Using_Array {
                 return -1;   
             }
         }
+
+        public int top(){
+            return arr[top];
+        }
+
+        public int size(){
+            return top + 1;
+        }
+
+        public int isEmpty(){
+            return (top == -1) ? 1 : 0; 
+        }
     }
 
     public static void main(String[] args){
         // Test Cases
         MyStack st = new MyStack();
-        String[] operations = {"push", "push", "pop", "push", "pop"};
-        int[] nums = {2, 3, -1, 4, -1};
+        String[] operations = {"push", "push", "pop", "push", "pop", "top", "size", "isEmpty", "pop", "isEmpty"};
+        int[] nums = {2, 3, -1, 4, -1, -1, -1, -1, -1, -1};
         int n = operations.length;
         List<Integer> list = new ArrayList<>();
         for(int i=0;i<n;i++){
@@ -55,8 +57,14 @@ public class Implement_Stack_Using_Array {
                 st.push(value);
             }else if(operation.equals("pop")){
                 list.add(st.pop());
+            }else if(operation.equals("top")){
+                list.add(st.top());
+            }else if(operation.equals("size")){
+                list.add(st.size());
+            }else if(operation.equals("isEmpty")){
+                list.add(st.isEmpty());
             }
         }
-        System.out.println("Popped Elements: " + list);
+        System.out.println("Result: " + list);
     }
 }
