@@ -6,7 +6,11 @@
 import java.util.*;
 
 public class Inorder_Traversal {
-    // Left : Root : Right
+    /*
+        Left : Root : Right
+        TC -> O(N) {As we are visiting each node exactly once}
+        SC -> O(N){In the worst case due to recursion stack} otherwise it's O(logN){Recursion Stack Space}
+    */
     public static void inorderTraversalHelper(TreeNode root, List<Integer> list){
         if(root == null)    return;
 
