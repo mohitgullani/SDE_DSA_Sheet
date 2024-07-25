@@ -8,7 +8,7 @@ import java.util.*;
 public class Vertical_Order_Traversal_Of_Binary_Tree {
     /*
         BFS Approach or Level Order Traversal
-        TC -> O(N)
+        TC -> O(NlogN) As we are using TreeMap which takes O(logN) for each insertion and retrieval
         SC -> O(N)
     */
     public static List<List<Integer>> verticalTraversal(TreeNode root) {
