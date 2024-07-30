@@ -2,7 +2,6 @@
     Problem Name: Maximum Path Sum
     Problem Link: https://leetcode.com/problems/binary-tree-maximum-path-sum/
 */
-
 import java.util.*;
 
 public class Maximum_Path_Sum {
