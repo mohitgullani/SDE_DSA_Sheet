@@ -39,29 +39,6 @@ public class Populate_Next_Right_Pointer {
         connect(root2);
     }
 
-    public static List<List<Integer>> levelOrderTraversal(TreeNode root){
-        List<List<Integer>> result = new ArrayList<>();
-        if(root == null)    return result;
-        Queue<TreeNode> que = new LinkedList<>();
-        que.add(root);
-        while(!que.isEmpty()){
-            int n = que.size();
-            List<Integer> list = new ArrayList<>();
-            for(int i=0;i<n;i++){
-                TreeNode node = que.remove();
-                list.add(node.val);
-                if(node.left != null){
-                    que.add(node.left);
-                }
-                if(node.right != null){
-                    que.add(node.right);
-                }
-            }
-            result.add(list);
-        }
-        return result;
-    }
-
     public static TreeNode insertLevelOrder(Integer[] arr) {
         if (arr.length == 0 || arr[0] == null) return null;
 
