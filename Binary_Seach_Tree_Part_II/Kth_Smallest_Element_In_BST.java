@@ -9,7 +9,7 @@ public class Kth_Smallest_Element_In_BST {
     /*
         Brute Force Approach
         TC -> O(N){Traversal} + O(NlogN){Sorting}
-        SC -> O(Height){Recursion Stack Space} + O(N){For Stroign Elements in the List}
+        SC -> O(Height){Recursion Stack Space} + O(N){For Storing Elements in the List}
         public static int kthSmallest(TreeNode root, int k) {
             List<Integer> list = new ArrayList<>();
             preorderTraversal(root, list);
@@ -30,7 +30,7 @@ public class Kth_Smallest_Element_In_BST {
     /*
         Better Approach
         TC -> O(N){Traversal}
-        SC -> O(Height){Recursion Stack Space} + O(N){For Stroign Elements in the List}
+        SC -> O(Height){Recursion Stack Space} + O(N){For Storing Elements in the List}
         public static int kthSmallest(TreeNode root, int k) {
             List<Integer> list = new ArrayList<>();
             inorderTraversal(root, list);
